@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 1rem;
+  padding: 2rem;
+  background: linear-gradient(
+      45deg,
+      pink 0%,
+      #df7802 25%,
+      #5caaf9 50%,
+      #965b96 75%,
+      pink 100%
+    )
+    bottom right;
+  background-size: 600% 600%;
+  animation-name: body-animaatio;
+  animation-duration: 40s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  background-attachment: fixed;
+}
+
+@keyframes body-animaatio {
+  0% {
+    background-position: top left;
+  }
+  25% {
+    background-position: top right;
+  }
+  50% {
+    background-position: bottom right;
+  }
+  75% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+section {
+  padding: 2rem;
+}
+div {
+  margin: 1rem;
+}
+/*first task alkaa */
+
+.first-task {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #df7802;
+  border: 1px solid #c32d00;
+  transition: all 1s ease-in-out;
+}
+
+.first-task:hover {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #c32d00;
+  border: 3px solid #df7802;
+}
+
+/* second task alkaa */
+
+.second-task {
+  height: 40px;
+  width: 40px;
+  background-color: teal;
+  transition: all 1s;
+}
+
+.second-task:hover {
+  transform: rotate(180deg);
+  background-color: aqua;
+}
+
+/* third task alkaa */
+
+.third-task {
+  height: 200px;
+  width: 200px;
+  background-color: lightcoral;
+  transition: all 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.third-task p {
+  text-align: center;
+  opacity: 0;
+  padding: 30px;
+  transition: all 2s;
+}
+
+.third-task:hover {
+  height: 150px;
+  width: 150px;
+}
+.third-task p:hover {
+  opacity: 1;
+}
+
+/* fifth task alkaa */
+
+.fifth-task {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background-color: goldenrod;
+  text-align: center;
+  margin: 1rem;
+}
+.fifth-task h3 {
+  padding: 25px;
+}
+/*left side*/
+
+.fifth-task h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 3px solid black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  transition: all 1s;
+}
+
+.fifth-task:hover h3::before {
+  bottom: 0;
+}
+
+/*top side*/
+
+.fifth-task::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 3px solid black;
+  top: 0;
+  left: 0;
+  right: 200px;
+  bottom: 0;
+  transition: all 1s;
+}
+
+.fifth-task:hover::before {
+  right: 0;
+}
+
+/*right side*/
+
+.fifth-task h3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: 3px solid black;
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 1s;
+}
+
+.fifth-task:hover h3::after {
+  top: 0;
+}
+
+/*bottom side*/
+
+.fifth-task::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 3px solid black;
+  top: 0;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  transition: all 1s;
+}
+
+.fifth-task:hover::after {
+  left: 0;
+}
+/* fifth task loppuu */
+
+/*sixth task alkaa*/
+
+.animated-circle {
+  height: 100px;
+  width: 100px;
+  background-color: orangered;
+  margin: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: example 4s infinite;
+  animation-fill-mode: forwards;
+}
+
+.animated-circle:hover {
+  animation-play-state: paused;
+}
+
+@keyframes example {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+  50% {
+    top: 300px;
+    left: 300px;
+    background-color: red;
+    border-radius: 0%;
+  }
+  75% {
+    top: 300px;
+    left: 0;
+    background-color: coral;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/*Sixth task loppuu*/
